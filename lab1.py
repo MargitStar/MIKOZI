@@ -2,19 +2,7 @@ import math
 
 alphabet = list('АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
 
-# Task 1
-
-# int gcd (int a, int b, int & x, int & y) {
-#   if (a == 0) {
-#     x = 0; y = 1;
-#     return b;
-#   }
-#   int x1, y1;
-#   int d = gcd (b%a, a, x1, y1);
-#   x = y1 - (b / a) * x1;
-#   y = x1;
-#   return d;
-# }
+# Task 1 Affine
 
 def gcd(a, b):
     if not b:
@@ -52,16 +40,19 @@ def affine_decrypt(text, alphabet, a, b):
 
     return "".join(decrypted)
 
-print(f'Initial text: БОБКОВА')
-
 
 affine_en = affine_encrypt('БОБКОВА', alphabet, 8, 18)
-print("Encrypted:", affine_en)
 
+print(f'Initial text: БОБКОВА')
+print("Encrypted:", affine_en)
 print("Decrypted: ",affine_decrypt(affine_en, alphabet, 8, 18))
 
 
+
+
 # Task 2 (Vigenère cipher)
+
+
 key = list('ДУЦ')
 text = list('ЬЬКФЁЫОЕИ')
 
