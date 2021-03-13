@@ -25,8 +25,7 @@ def affine_decrypt(text, alphabet, a, b):
     m = len(alphabet)
 
     decrypted = []
-
-    x, y = 0, 0
+    
     x, y, g = gcd(a, m)
     if g != 1:
         print("Error")
