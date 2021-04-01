@@ -22,7 +22,7 @@ def module(a, m):
 def bin_pow(a, n, m):
     result = 1
     while n:
-        if n & 1 == 1:
+        if n & 1:
             result *= a
             result %= m
             n -= 1
