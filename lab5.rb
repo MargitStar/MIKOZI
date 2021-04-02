@@ -58,4 +58,5 @@ def generate_key(q)
 
     d = rand(1...(q - 1))
     e = bin_pow(g, d, p)
+    return p, q, g, e, d
 end
